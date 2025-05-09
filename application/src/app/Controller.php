@@ -23,6 +23,15 @@ class Controller extends Response
         return $this->render_media($path->name);
     }
 
+    public function page(Path $path): array|string
+    {
+        $this->context(lang: 'ru');
+
+        $name = substr($path->name, 0, -4) . 'php';
+
+        return $this->render_template($name);
+    }
+
     public function archive(Path $path, callable $middleware): array
     {
         $url = $this->url_for('archive', year: '2025', month: '05', day: '25');

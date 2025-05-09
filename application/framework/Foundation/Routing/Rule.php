@@ -29,7 +29,7 @@ class Rule extends Mapper
 
     public function where(string ...$args): void
     {
-        if (false === self::$flag)
+        if (!self::$flag)
             foreach ($args as $name => $pattern)
                 self::$tmp[$this->path][3]['{' . $name . '}'] = '(' . $pattern . ')';
     }

@@ -105,7 +105,6 @@ class Server extends Routing\Mapper
     {
         Core::$resource = $dirname . DIRECTORY_SEPARATOR . 'resource' . DIRECTORY_SEPARATOR;
         Core::$src = $dirname . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR;
-        Core::$url = '/static/';
 
         new static(Core::$resource . 'routing');
     }

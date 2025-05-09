@@ -14,6 +14,10 @@ $map->rule('/media/{name}', 'media')
     ->where(name: '[a-z]+\\.[a-z]+');
 $map->controller('media', Controller::class, 'media');
 
+$map->rule('/page/{name}', 'page')
+    ->where(name: '[a-z]+\\.[a-z]+');
+$map->controller('page', Controller::class, 'page');
+
 $map->rule('/archive/{year}', 'archive')
     ->where(year: '[0-9]{4}');
 $map->rule('/archive/{year}/{month}', 'archive')
